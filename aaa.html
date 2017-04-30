@@ -19,7 +19,6 @@
 </head>
 <body ng-controller="scoreboardController" style="text-align: left">
 
-<body ng-controller="scoreboardController" style="text-align: center">
 <h3><center>AAA Scoreboard</center></h3>
   <div class="container">
     <div class="row">
@@ -45,10 +44,10 @@
       <div class="start" style="width: 75px; float: left; font-size: 10px; text-align: left;" ng-if="game.status.status == 'Pre\-Game' || game.status.status == 'Preview' || game.status.status == 'Warmup'">Start time ET:</div>
 	  
 	 <!--If the game is in progress or it's over, show the number of runs that the away team has scored.-->
-	  <div class="away-score" style="width: 40px; float: left; align: left; font-size: 10px; text-align: left;" ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over'">{{game.linescore.r.away}}</div>
+	  <div class="away-score" style="width: 40px; float: left; align: left; font-size: 10px; text-align: left;" ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early'">{{game.linescore.r.away}}</div>
 	  
 	 <!--If the game isn't in preview or pregame, and it isn't over, it must be in progress. Show the inning.-->
-	  	<div class="inning" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Delayed Start'">{{game.status.inning_state}} {{game.status.inning}}</div>
+	  	<div class="inning" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Delayed Start' && game.status.status != 'Warmup'">{{game.status.inning_state}} {{game.status.inning}}</div>
 		
 	 <!--If the game has ended and it went the scheduled nine innings, show the word "Final" without the number of innings played.-->
 		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Final' && game.status.inning == 9"><b>Final</b></div>
@@ -70,7 +69,7 @@
         
 		<div class="start"style="width: 75px; float: left; font-size: 10px;" ng-if="game.status.status == 'Pre\-Game' || game.status.status == 'Preview' || game.status.status == 'Warmup'">{{game.time}} {{game.ampm}}</div>
 		
-		<div class="home-score" style="width: 40px; float: left; font-size: 10px;"  ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status =='Completed Early'">{{game.linescore.r.home}}</div>
+		<div class="home-score" style="width: 40px; float: left; font-size: 10px;"  ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early'">{{game.linescore.r.home}}</div>
 		
 		 	<div class="inning" style="width: 175px; float: left; font-size: 10px;" ng-if="game.status.status == 'In Progress'">{{game.status.o}} Out</div>
 			<div class="inning" style="width: 175px; float: left; font-size: 10px;" ng-if="game.status.status != 'In Progress' && game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' !& game.status.reason">{{game.status.status}}</div>
