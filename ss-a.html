@@ -4,7 +4,7 @@
 <html lang="en" ng-app="mlbApp">
 <head>
   <meta charset="utf-8">
-  <title>Short Season A Scoreboard</title>
+  <title>Short Season Class A Scoreboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" src="scoreboard.css">
@@ -15,11 +15,15 @@
   <script src="js/angular-resource.min.js"></script>
   <script src="js/ss-a-service.js"></script>
   <script src="js/main.js"></script>
+  <base href="http://www.milb.com/" target="_blank">
+
+
+
 <META HTTP-EQUIV="refresh" CONTENT="180">
 </head>
 <body ng-controller="scoreboardController" style="text-align: left">
 
-<h3><center>Short Season A Scoreboard</center></h3>
+<h3><center>Short Season Class A Scoreboard</center></h3>
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-xs-12">
@@ -31,7 +35,7 @@
   </div>
 
 
-   <div class="container.fluid" ng-repeat="game in scoreboards">
+  <div class="container.fluid" ng-repeat="game in scoreboards">
      <div class="row">
 	 <!--If the away team is winning, their name should be bold-->
       <div class="away" style="margin-left: 50px; text-align: left; font-weight: bold; width: 125px; align: left; float: left; font-size: 10px;" ng-if="parseInt(game.linescore.r.home) < parseInt(game.linescore.r.away)">{{game.away_team_city}} ({{game.away_win}}-{{game.away_loss}})</div>
@@ -41,24 +45,25 @@
       <div class="away-score" style="text-align: left; width: 175px; float: left; align: left; font-size: 10px;" ng-if="game.status.status == 'Preview' || game.status.status == 'Pre\-Game' || game.status.status == 'Warmup'">{{game.away_probable_pitcher.first_name}} {{game.away_probable_pitcher.last}} ({{game.away_probable_pitcher.wins}}-{{game.away_probable_pitcher.losses}}, {{game.away_probable_pitcher.era}}) </div>
 	  
 	 <!--If the game has not yet started, show the start time. This div just contains the actual words 'start time'-->
-      <div class="start" style="width: 75px; float: left; font-size: 10px; text-align: left;" ng-if="game.status.status == 'Pre\-Game' || game.status.status == 'Preview' || game.status.status == 'Warmup'">Start time ET:</div>
+      <div class="start" style="width: 75px; float: left; font-size: 10px; text-align: left;" ng-if="game.time != '3:33' && (game.status.status == 'Pre\-Game' || game.status.status == 'Preview' || game.status.status == 'Warmup')">Start time ET:</div>
+
 	  
 	 <!--If the game is in progress or it's over, show the number of runs that the away team has scored.-->
 	  <div class="away-score" style="width: 40px; float: left; align: left; font-size: 10px; text-align: left;" ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early'">{{game.linescore.r.away}}</div>
 	  
 	 <!--If the game isn't in preview or pregame, and it isn't over, it must be in progress. Show the inning.-->
-	  	<div class="inning" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Delayed Start' && game.status.status != 'Warmup'">{{game.status.inning_state}} {{game.status.inning}}</div>
+	  	<div class="inning" style="width: 75px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Delayed Start' && game.status.status != 'Warmup' && game.status.status != 'Completed Early'">{{game.status.inning_state}} {{game.status.inning}}</div>
 
-		
 	 <!--If the game has ended and it went the scheduled nine innings, show the word "Final" without the number of innings played.-->
-		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Final' && game.status.inning == 9"><b>Final</b></div>
+		<div class="final" style="width: 75px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Final' && game.status.inning == 9"><b>Final</b></div>
 	 
      <!--If the game has ended and it didn't go exactly nine innings, show the word "Final" and the number of innings played.--> 	 
-		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Final' && game.status.inning != 9"><b>Final/{{game.status.inning}}</b></div>
+		<div class="final" style="width: 75px; float: left; text-align: left; font-size: 10px;" ng-if="(game.status.status == 'Final' || game.status.status == 'Completed Early') && game.status.inning != 9"><b>Final/{{game.status.inning}}</b></div>
 		
 	 <!--Sometimes MLB lists final scores as 'game over' instead of 'final'. These lines do the same as the two lines above, but adjust for this quirk.--> 
-		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Game Over' && game.status.inning == 9"><b>Final</b></div>
-		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Game Over' && game.status.inning != 9"><b>Final/{{game.status.inning}}</b></div>
+		<div class="final" style="width: 75px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Game Over' && game.status.inning == 9"><b>Final</b></div>
+		<div class="final" style="width: 75px; float: left; text-align: left; font-size: 10px;" ng-if="game.status.status == 'Game Over' && game.status.inning != 9"><b>Final/{{game.status.inning}}</b></div>
+		<div class="start" style="width: 175px; float: left; font-size: 10px; text-align: left;" ng-if="game.time == '3:33'">Doubleheader Game 2</div>
     </div>
 	
 	
@@ -68,14 +73,19 @@
 		
         <div class="home-score" style="width: 175px; float: left; font-size: 10px;" ng-if="game.status.status == 'Preview' || game.status.status == 'Pre\-Game' || game.status.status == 'Warmup'">{{game.home_probable_pitcher.first_name}} {{game.home_probable_pitcher.last}} ({{game.home_probable_pitcher.wins}}-{{game.home_probable_pitcher.losses}}, {{game.home_probable_pitcher.era}}) </div>
         
-		<div class="start"style="width: 75px; float: left; font-size: 10px;" ng-if="game.status.status == 'Pre\-Game' || game.status.status == 'Preview' || game.status.status == 'Warmup'">{{game.time}} {{game.ampm}}</div>
+		<div class="start"style="width: 75px; float: left; font-size: 10px;" ng-if="game.time != '3:33' && (game.status.status == 'Pre\-Game' || game.status.status == 'Preview' || game.status.status == 'Warmup')">{{game.time}} {{game.ampm}}</div>
+
 		
 		<div class="home-score" style="width: 40px; float: left; font-size: 10px;"  ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early'">{{game.linescore.r.home}}</div>
 		
-		 	<div class="inning" style="width: 175px; float: left; font-size: 10px;" ng-if="game.status.status == 'In Progress'">{{game.status.o}} Out</div>
+		 	<div class="inning" style="width: 40px; float: left; font-size: 10px;" ng-if="game.status.status == 'In Progress'">{{game.status.o}} Out</div>
 			<div class="inning" style="width: 175px; float: left; font-size: 10px;" ng-if="game.status.status != 'In Progress' && game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' !& game.status.reason">{{game.status.status}}</div>
 			<div class="inning" style="width: 175px; float: left; font-size: 10px;" ng-if="game.status.status != 'In Progress' && game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.reason">{{game.status.status}} - {{game.status.reason}}</div>
+					<div class="boxscore" style="text-align: left; width: 175px; float: left; font-size: 10px;" ng-if="game.status.status != 'Pre\-Game' && game.status.status != 'Preview' && game.status.status != 'Warmup' && game.status.status != 'Postponed'">
+		<a href="{{game.links.box}}">Box Score</a>
+		</div>
 			</div>
+			
 			
 		<div class="row">
 		<div class="now-batting" style="margin-left: 50px; width: 325px; text-align: left; float: left; font-size: 10px;" ng-if="game.status.status == 'In Progress'"><b>Batter:</b> {{game.batter.name_display_roster}} ({{game.batter.avg}}/{{game.batter.obp}}/{{game.batter.slg}})</div></div>
@@ -87,11 +97,12 @@
 		<div class="winning_pitcher" style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 10px;" ng-if="game.winning_pitcher"><b>W:</b> {{game.winning_pitcher.first}} {{game.winning_pitcher.last}} ({{game.winning_pitcher.wins}}-{{game.winning_pitcher.losses}}, {{game.winning_pitcher.era}}) </div></div>
 	<div class="row">
 	<div class="losing_pitcher" style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 10px;" ng-if="game.winning_pitcher"><b>L:</b> {{game.losing_pitcher.first}} {{game.losing_pitcher.last}} ({{game.losing_pitcher.wins}}-{{game.losing_pitcher.losses}}, {{game.losing_pitcher.era}}) </div>
-	<div class="most_recent_play" style="margin-left: 50px; text-align: left; width: 440px; float: left; font-size: 10px;" ng-if="game.pbp.last"><b>Last play:</b> {{game.pbp.last}}</div>
+	<div class="most_recent_play" style="margin-left: 50px; text-align: left; width: 540px; float: left; font-size: 10px;" ng-if="game.pbp.last"><b>Last play:</b> {{game.pbp.last}}</div>
     </div>
 	<div class="row">
-	<div class="save_pitcher" style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 10px;" ng-if="game.save_pitcher && game.save_pitcher.id != ''"><b>SV:</b> {{game.save_pitcher.first}} {{game.save_pitcher.last}} ({{game.save_pitcher.wins}}-{{game.save_pitcher.losses}}, {{game.save_pitcher.era}}, {{game.save_pitcher.saves}} saves) </div></div>
-    <div class="horizontal-divider" style="height: 1px;margin-top: 10px; border: 0; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))" ng-show="game.home_team_name != null"></div></div>
+	<div class="save_pitcher" style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 10px;" ng-if="game.save_pitcher && game.save_pitcher.id != '' && game.save_pitcher.saves != 1"><b>SV:</b> {{game.save_pitcher.first}} {{game.save_pitcher.last}} ({{game.save_pitcher.wins}}-{{game.save_pitcher.losses}}, {{game.save_pitcher.era}}, {{game.save_pitcher.saves}} saves) </div>
+	<div class="save_pitcher" style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 10px;" ng-if="game.save_pitcher && game.save_pitcher.id != '' && game.save_pitcher.saves == 1"><b>SV:</b> {{game.save_pitcher.first}} {{game.save_pitcher.last}} ({{game.save_pitcher.wins}}-{{game.save_pitcher.losses}}, {{game.save_pitcher.era}}, {{game.save_pitcher.saves}} save) </div></div>    
+	<div class="horizontal-divider" style="height: 1px;margin-top: 10px; border: 0; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))" ng-show="game.home_team_name != null"></div></div>
   <div class="row" id="error" ng-show="scoreboards[0] == undefined">
       <div class="error-message col-md-6 col-xs-6">No games today</div>
     </div>
