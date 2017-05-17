@@ -11,9 +11,10 @@ mlbApp.controller('scoreboardController', ['$scope', 'getScore',
             var gameData = [];
             if (Array.isArray(response.data.games.game)) {
                 for (var i = 0; i < response.data.games.game.length; i++) {
-                    if (response.data.games.game[i].home_team_id == 141 || response.data.games.game[i].away_team_id == 141) {
+        /*            if (response.data.games.game[i].home_team_id == 141 || response.data.games.game[i].away_team_id == 141) {
                         gameData.unshift(response.data.games.game[i]);
-                    } else {
+					} else */
+					{
                         gameData.push(response.data.games.game[i]);
                     }
                 }
