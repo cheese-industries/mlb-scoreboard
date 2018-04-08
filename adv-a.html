@@ -53,8 +53,8 @@
 	  <div class="away-score" style="width: 40px; float: left; align: left; font-size: 12px; text-align: left;" ng-if="game.status.status == 'Postponed'">       </div>
 	  
 	 <!--If the game isn't in preview or pregame, and it isn't over, it must be in progress. Show the inning.-->
-	  	<div class="inning" style="width: 75px; float: left; text-align: left; font-size: 12px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start'">{{game.status.inning_state}} {{game.status.inning}}</div>
-		<div class="boxscore" style="text-align: left; width: 175px; float: left; font-size: 12px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed'">Balls: {{game.status.b}} Strikes: {{game.status.s}}</div>
+	  	<div class="inning" style="width: 75px; float: left; text-align: left; font-size: 12px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early'">{{game.status.inning_state}} {{game.status.inning}}</div>
+		<div class="boxscore" style="text-align: left; width: 175px; float: left; font-size: 12px;" ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early'">Balls: {{game.status.b}} Strikes: {{game.status.s}}</div>
 	<!--Is there a no-hitter or a perfect game in progress?-->
 		<div class="notes" ng-if="game.status.is_no_hitter == 'Y' && game.status.is_perfect_game != 'Y' && game.status.status != 'Final'"><b>NO-HITTER</B></div>
 		<div class="notes" ng-if="game.status.is_perfect_game == 'Y' && game.status.status != 'Final'"><b>PERFECT GAME</B></div>
@@ -70,7 +70,7 @@
 		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 12px;" ng-if="game.status.status == 'Final' && game.status.inning == 9 && game.status.is_no_hitter != 'Y' && game.status.is_perfect_game != 'Y'"><b>Final</b></div>
 			 
      <!--If the game has ended, wasn't a no-hitter or perfect game and it didn't go exactly nine innings, show the word "Final" and the number of innings played.--> 	 
-		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 12px;" ng-if="game.status.status == 'Final' && game.status.inning != 9 && game.status.is_no_hitter != 'Y' && game.status.is_perfect_game != 'Y'"><b>Final/{{game.status.inning}}</b></div>
+		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 12px;" ng-if="(game.status.status == 'Final' || game.status.status == 'Completed Early') && game.status.inning != 9 && game.status.is_no_hitter != 'Y' && game.status.is_perfect_game != 'Y'"><b>Final/{{game.status.inning}}</b></div>
 
 	 <!--If the game has ended, was a no-hitter or perfect game and it didn't go exactly nine innings, show the word "Final" and the number of innings played.--> 	 
 		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 12px;" ng-if="game.status.status == 'Final' && game.status.inning != 9 && game.status.is_no_hitter == 'Y' && game.status.is_perfect_game != 'Y'"><b>Final/{{game.status.inning}} - NO-HITTER</b></div>
@@ -83,7 +83,7 @@
 		<div class="notes" ng-if="game.status.is_perfect_game == 'Y' && game.status.status == 'Game Over' && game.status.inning == 9"><b>FINAL - PERFECT GAME</B></div>
 		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 12px;" ng-if="game.status.status == 'Game Over' && game.status.inning != 9 && game.status.is_no_hitter == 'Y' && game.status.is_perfect_game != 'Y'"><b>Final/{{game.status.inning}} - NO-HITTER</b></div>
 		<div class="final" style="width: 175px; float: left; text-align: left; font-size: 12px;" ng-if="game.status.status == 'Game Over' && game.status.inning != 9 && game.status.is_perfect_game == 'Y'"><b>Final/{{game.status.inning}} - PERFECT GAME</b></div>
-		<div class="start" style="width: 175px; float: left; font-size: 12px; text-align: left;" ng-if="game.away_time == '3:33'">Game 2</div>
+		<div class="start" style="width: 75px; float: left; font-size: 12px; text-align: left;" ng-if="game.away_time == '3:33'">Game 2</div>
     </div>
 	
 	
