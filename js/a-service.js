@@ -1,5 +1,5 @@
 var scoreboardService = angular.module('scoreboardService', [ 'ngResource' ]);
-// Hello World!
+
 scoreboardService
 		.factory(
 				'getScore',
