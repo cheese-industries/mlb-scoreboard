@@ -6,8 +6,9 @@ scoreboardService
 				[
 						'$resource',
 						function($resource) {
+							var res = 'http://gd2.mlb.com/components/game/' + serviceName + '/year_:yearNum/month_:monthNum/day_:dayNum/master_scoreboard.json';
 							return $resource(
-									'http://gd2.mlb.com/components/game/mlb/year_:yearNum/month_:monthNum/day_:dayNum/master_scoreboard.json',
+									res,
 									{}, {
 										get : {
 											method : 'GET',
