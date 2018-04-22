@@ -2,7 +2,26 @@
 <html lang="en" ng-app="mlbApp">
 <head>
 <meta charset="utf-8">
-<title>Rookie League Scoreboard</title>
+<?php
+    $level   = $_GET['level'];
+    $service = $_GET['service'];
+    
+    function boxScore($level)
+    {
+        echo(($level == "MLB")
+            ? "<a href=\"{{game.links.preview}}\">MLB.com Gameday</a>"
+            : "<a href=\"{{game.links.box_link}}\">Box Score</a>");
+    }
+    
+    function setBaseHref($level)
+    {
+        echo(($level == "MLB")
+            ? "<base href=\"http://mlb.mlb.com/\" target=\"_blank\">"
+            : "<base href=\"http://www.milb.com/\" target=\"_blank\">");
+    }
+    
+?>
+<title><?php echo($level); ?> Scoreboard</title>
 <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -16,17 +35,17 @@
     src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 <script src="js/angular-resource.min.js"></script>
 <script>
-    var serviceName = "rok";
+    var serviceName = "<?php echo($service); ?>";
 </script>
 <script src="js/service.js"></script>
 <script src="js/main.js"></script>
-<base href="http://www.milb.com/" target="_blank">
+<?php setBaseHref($level) ?>
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body ng-controller="scoreboardController"
     style="text-align: left; font-family: 'Roboto', sans-serif;">
     <h3>
-        <center>Rookie League Scoreboard</center>
+        <center><?php echo($level); ?> Scoreboard</center>
     </h3>
     <div class="container">
         <div class="row">
@@ -197,7 +216,7 @@
             <div class="boxscore"
                 style="text-align: left; width: 175px; float: left; font-size: 12px;"
                 ng-if="game.status.status != 'Pre\-Game' && game.status.status != 'Preview' && game.status.status != 'Warmup' && game.status.status != 'Postponed' && game.status.status != 'Cancelled'">
-                <a href="{{game.links.box_link}}">Box Score</a>
+                <?php boxScore($level); ?>
             </div>
         </div>
         <div class="row" style="background-color: #ffe6e6">
