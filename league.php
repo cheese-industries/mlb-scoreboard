@@ -3,23 +3,19 @@
 <head>
 <meta charset="utf-8">
 <?php
-    $level   = $_GET['level'];
-    $service = $_GET['service'];
-    
-    function boxScore($level)
-    {
-        echo(($level == "MLB")
-            ? "<a href=\"{{game.links.preview}}\">MLB.com Gameday</a>"
-            : "<a href=\"{{game.links.box_link}}\">Box Score</a>");
-    }
-    
-    function setBaseHref($level)
-    {
-        echo(($level == "MLB")
-            ? "<base href=\"http://mlb.mlb.com/\" target=\"_blank\">"
-            : "<base href=\"http://www.milb.com/\" target=\"_blank\">");
-    }
-    
+$level = $_GET['level'];
+$service = $_GET['service'];
+
+function boxScore($level)
+{
+    echo (($level == "MLB") ? "<a href=\"{{game.links.preview}}\">MLB.com Gameday</a>" : "<a href=\"{{game.links.box_link}}\">Box Score</a>");
+}
+
+function setBaseHref($level)
+{
+    echo (($level == "MLB") ? "<base href=\"http://mlb.mlb.com/\" target=\"_blank\">" : "<base href=\"http://www.milb.com/\" target=\"_blank\">");
+}
+
 ?>
 <title><?php echo($level); ?> Scoreboard</title>
 <link rel="stylesheet"
@@ -311,6 +307,16 @@
                 {{game.save_pitcher.era}}, {{game.save_pitcher.saves}} save)
             </div>
         </div>
+        <div class="row" style="background-color: #ffffcc">
+            <div class="home_runs"
+                style="margin-left: 50px; text-align: left; width: 100%; float: left; font-size: 12px;"
+                ng-if="game.home_runs.player.length > 0">
+                <b>Home Runs:</b> <span
+                    ng-repeat="x in game.home_runs.player"> {{
+                    x.name_display_roster}} {{x.team_code | uppercase}}
+                    {{x.std_hr}}{{$last ? '' : ', '}} </span>
+            </div>
+        </div>
         <div class="horizontal-divider"
             style="height: 1px; margin-top: 10px; border: 0; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))"
             ng-show="game.home_team_name != null"></div>
@@ -320,5 +326,6 @@
     </div>
     <div class="row" id="server-error" style="display: none">
         <div class="server-message col-md-6 col-xs-6">Server Error</div>
+
 </body>
 </html>
