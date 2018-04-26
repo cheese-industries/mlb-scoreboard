@@ -204,9 +204,6 @@ function setBaseHref($level)
                 Out</div>
             <div class="inning"
                 style="width: 175px; float: left; font-size: 12px;"
-                ng-if="game.status.status != 'In Progress' && game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' !& game.status.reason">{{game.status.status}}</div>
-            <div class="inning"
-                style="width: 175px; float: left; font-size: 12px;"
                 ng-if="game.status.status != 'In Progress' && game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.reason">{{game.status.status}}
                 - {{game.status.reason}}</div>
             <div class="boxscore"
@@ -308,6 +305,7 @@ function setBaseHref($level)
             </div>
         </div>
         <div class="row" style="background-color: #ffffcc">
+            <!-- Homer Array -->
             <div class="home_runs"
                 style="margin-left: 50px; text-align: left; width: 100%; float: left; font-size: 12px;"
                 ng-if="game.home_runs.player.length > 0">
@@ -315,6 +313,15 @@ function setBaseHref($level)
                     ng-repeat="x in game.home_runs.player"> {{
                     x.name_display_roster}} {{x.team_code | uppercase}}
                     {{x.std_hr}}{{$last ? '' : ', '}} </span>
+            </div>
+            <!-- Single Homer -->
+            <div class="home_runs"
+                style="margin-left: 50px; text-align: left; width: 100%; float: left; font-size: 12px;"
+                ng-if="game.home_runs.player && game.home_runs.player != '' && game.home_runs.player.length == undefined">
+                <b>Home Run: </b> <span>
+                    {{game.home_runs.player.name_display_roster}}
+                    {{game.home_runs.player.team_code | uppercase}}
+                    {{game.home_runs.player.std_hr}} </span>
             </div>
         </div>
         <div class="horizontal-divider"
