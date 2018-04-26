@@ -333,6 +333,5 @@ function setBaseHref($level)
     </div>
     <div class="row" id="server-error" style="display: none">
         <div class="server-message col-md-6 col-xs-6">Server Error</div>
-
 </body>
 </html>
