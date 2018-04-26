@@ -111,7 +111,7 @@ function setBaseHref($level)
                 ng-if="game.status.is_perfect_game == 'Y' && game.status.status == 'Final' && game.status.inning == 9">
                 <b>FINAL - PERFECT GAME</B>
             </div>
-            <!--If the game is postponed, display the word 'postponed'-->
+            <!--If the game is postponed, display the word 'postponed'.-->
             <div class="final"
                 style="width: 175px; float: left; text-align: left; font-size: 12px;"
                 ng-if="game.status.status == 'Postponed' || game.status.status == 'Cancelled'">
