@@ -309,7 +309,7 @@ function setBaseHref($level)
             <div class="home_runs"
                 style="margin-left: 50px; text-align: left; width: 100%; float: left; font-size: 12px;"
                 ng-if="game.home_runs.player.length > 0">
-                <b>Home Runs:</b> <span
+                <b>HR:</b> <span
                     ng-repeat="x in game.home_runs.player"> {{
                     x.name_display_roster}} {{x.team_code | uppercase}}
                     {{x.std_hr}}{{$last ? '' : ', '}} </span>
@@ -318,7 +318,7 @@ function setBaseHref($level)
             <div class="home_runs"
                 style="margin-left: 50px; text-align: left; width: 100%; float: left; font-size: 12px;"
                 ng-if="game.home_runs.player && game.home_runs.player != '' && game.home_runs.player.length == undefined">
-                <b>Home Run: </b> <span>
+                <b>HR: </b> <span>
                     {{game.home_runs.player.name_display_roster}}
                     {{game.home_runs.player.team_code | uppercase}}
                     {{game.home_runs.player.std_hr}} </span>
