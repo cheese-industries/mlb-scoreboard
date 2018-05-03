@@ -117,6 +117,12 @@ function setBaseHref($level)
                 ng-if="game.status.status == 'Postponed' || game.status.status == 'Cancelled'">
                 <b>Postponed</b>
             </div>
+			<!--If the start is delayed, display 'Delayed Start'.-->
+			<div class="final"
+                style="width: 175px; float: left; text-align: left; font-size: 12px;"
+                ng-if="game.status.status == 'Delayed Start'">
+                <b>Delayed Start</b>
+			</div>
             <!--If the game has ended, wasn't a no-hitter or perfect game and it went the scheduled nine innings, show the word "Final" without the number of innings played.-->
             <div class="final"
                 style="width: 175px; float: left; text-align: left; font-size: 12px;"
@@ -312,7 +318,7 @@ function setBaseHref($level)
                 <b>HR:</b> <span
                     ng-repeat="x in game.home_runs.player"> {{
                     x.name_display_roster}} {{x.team_code | uppercase}}
-                    {{x.std_hr}}{{$last ? '' : ', '}} </span>
+                    ({{x.std_hr}}){{$last ? '' : ', '}} </span>
             </div>
             <!-- Single Homer -->
             <div class="home_runs"
@@ -321,7 +327,7 @@ function setBaseHref($level)
                 <b>HR: </b> <span>
                     {{game.home_runs.player.name_display_roster}}
                     {{game.home_runs.player.team_code | uppercase}}
-                    {{game.home_runs.player.std_hr}} </span>
+                    ({{game.home_runs.player.std_hr}}) </span>
             </div>
         </div>
         <div class="horizontal-divider"
