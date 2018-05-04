@@ -80,18 +80,18 @@ function setBaseHref($level)
             <!--If the game is in progress or it's over, show the number of runs that the away team has scored.-->
             <div class="away-score"
                 style="width: 40px; float: left; align: left; font-size: 12px; text-align: left;"
-                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early'">{{game.linescore.r.away}}</div>
+                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early' || game.status.status == 'Suspended'">{{game.linescore.r.away}}</div>
             <div class="away-score"
                 style="width: 40px; float: left; align: left; font-size: 12px; text-align: left;"
                 ng-if="game.status.status == 'Postponed'"></div>
             <!--If the game isn't in preview or pregame, and it isn't over, it must be in progress. Show the inning.-->
             <div class="inning"
                 style="width: 75px; float: left; text-align: left; font-size: 12px;"
-                ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early'">{{game.status.inning_state}}
+                ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early' && game.status.status != 'Suspended'">{{game.status.inning_state}}
                 {{game.status.inning}}</div>
             <div class="boxscore"
                 style="text-align: left; width: 175px; float: left; font-size: 12px;"
-                ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early' && game.status.status != 'Cancelled'">Balls:
+                ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early' && game.status.status != 'Cancelled' && game.status.status != 'Suspended'">Balls:
                 {{game.status.b}} Strikes: {{game.status.s}}</div>
             <!--Is there a no-hitter or a perfect game in progress?-->
             <div class="notes"
@@ -122,6 +122,12 @@ function setBaseHref($level)
                 style="width: 175px; float: left; text-align: left; font-size: 12px;"
                 ng-if="game.status.status == 'Delayed Start'">
                 <b>Delayed Start</b>
+			</div>
+			<!--If the game is suspended, display 'Suspended' -->
+			<div class="final"
+                style="width: 175px; float: left; text-align: left; font-size: 12px;"
+                ng-if="game.status.status == 'Suspended'">
+                <b>Suspended</b>
 			</div>
             <!--If the game has ended, wasn't a no-hitter or perfect game and it went the scheduled nine innings, show the word "Final" without the number of innings played.-->
             <div class="final"
@@ -200,7 +206,7 @@ function setBaseHref($level)
                 {{game.ampm}}</div>
             <div class="home-score"
                 style="width: 40px; float: left; font-size: 12px;"
-                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early'">{{game.linescore.r.home}}</div>
+                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early' || game.status.status == 'Suspended'">{{game.linescore.r.home}}</div>
             <div class="home-score"
                 style="width: 40px; float: left; font-size: 12px;"
                 ng-if="game.status.status == 'Postponed'"></div>
@@ -278,6 +284,12 @@ function setBaseHref($level)
                 {{game.winning_pitcher.last}}
                 ({{game.winning_pitcher.wins}}-{{game.winning_pitcher.losses}},
                 {{game.winning_pitcher.era}})
+            </div>
+<!-- If the game is suspended, this line will display a note about the suspension. -->
+			<div class="suspended"
+                style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 12px;"
+                ng-if="game.status.status == 'Suspended'">
+                <b>{{game.status.note}}</b>
             </div>
         </div>
         <div class="row" style="background-color: #ffffcc">
