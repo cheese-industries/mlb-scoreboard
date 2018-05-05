@@ -117,18 +117,18 @@ function setBaseHref($level)
                 ng-if="game.status.status == 'Postponed' || game.status.status == 'Cancelled'">
                 <b>Postponed</b>
             </div>
-			<!--If the start is delayed, display 'Delayed Start'.-->
-			<div class="final"
+            <!--If the start is delayed, display 'Delayed Start'.-->
+            <div class="final"
                 style="width: 175px; float: left; text-align: left; font-size: 12px;"
                 ng-if="game.status.status == 'Delayed Start'">
                 <b>Delayed Start</b>
-			</div>
-			<!--If the game is suspended, display 'Suspended' -->
-			<div class="final"
+            </div>
+            <!--If the game is suspended, display 'Suspended' -->
+            <div class="final"
                 style="width: 175px; float: left; text-align: left; font-size: 12px;"
                 ng-if="game.status.status == 'Suspended'">
                 <b>Suspended</b>
-			</div>
+            </div>
             <!--If the game has ended, wasn't a no-hitter or perfect game and it went the scheduled nine innings, show the word "Final" without the number of innings played.-->
             <div class="final"
                 style="width: 175px; float: left; text-align: left; font-size: 12px;"
@@ -224,22 +224,22 @@ function setBaseHref($level)
                 <?php boxScore($level); ?>
             </div>
         </div>
-		<div class="row" style="background-color: #e6f2ff">
-		<!--This line will display any notes made by MLB/MILB about the game. Generally it'll be stuff like 'one out when winning run scored' or 'game suspended in the 8th inning'-->
-			<div class="note"
+        <div class="row" style="background-color: #e6f2ff">
+            <!--This line will display any notes made by MLB/MILB about the game. Generally it'll be stuff like 'one out when winning run scored' or 'game suspended in the 8th inning'-->
+            <div class="note"
                 style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 12px;"
                 ng-if="game.status.note">
                 <i>{{game.status.note}}</i>
             </div>
-		</div>
-				<div class="row" style="background-color: #f4f9e3">
-		<!--This line will display any description of the game. Stuff like 'Cleveland home opener'-->
-			<div class="description"
+        </div>
+        <div class="row" style="background-color: #f4f9e3">
+            <!--This line will display any description of the game. Stuff like 'Cleveland home opener'-->
+            <div class="description"
                 style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 12px;"
                 ng-if="game.description">
                 <i>{{game.description}}</i>
             </div>
-		</div>
+        </div>
         <div class="row" style="background-color: #ffe6e6">
             <div class="now-batting"
                 style="margin-left: 50px; width: 325px; text-align: left; float: left; font-size: 12px;"
@@ -337,9 +337,9 @@ function setBaseHref($level)
             <div class="home_runs"
                 style="margin-left: 50px; text-align: left; width: 100%; float: left; font-size: 12px;"
                 ng-if="game.home_runs.player.length > 0">
-                <b>HR:</b> <span
-                    ng-repeat="x in game.home_runs.player"> {{
-                    x.name_display_roster}} {{x.team_code | uppercase}}
+                <b>HR:</b> <span ng-repeat="x in game.home_runs.player">
+                    {{x.name_display_roster}}
+                    <span ng-controller="abbreviationController">{{convertAbbreviation(x.team_code)}}</span>
                     ({{x.std_hr}}){{$last ? '' : ', '}} </span>
             </div>
             <!-- Single Homer -->
@@ -348,7 +348,7 @@ function setBaseHref($level)
                 ng-if="game.home_runs.player && game.home_runs.player != '' && game.home_runs.player.length == undefined">
                 <b>HR: </b> <span>
                     {{game.home_runs.player.name_display_roster}}
-                    {{game.home_runs.player.team_code | uppercase}}
+                    <span ng-controller="abbreviationController">{{convertAbbreviation(game.home_runs.player.team_code)}}</span>
                     ({{game.home_runs.player.std_hr}}) </span>
             </div>
         </div>
@@ -361,5 +361,6 @@ function setBaseHref($level)
     </div>
     <div class="row" id="server-error" style="display: none">
         <div class="server-message col-md-6 col-xs-6">Server Error</div>
+
 </body>
 </html>
