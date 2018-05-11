@@ -227,7 +227,7 @@ function setBaseHref($level)
         <div class="row" style="background-color: #e6f2ff">
             <!--This line will display any notes made by MLB/MILB about the game. Generally it'll be stuff like 'one out when winning run scored' or 'game suspended in the 8th inning'-->
             <div class="note"
-                style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 12px;"
+                style="margin-left: 50px; text-align: left; width: 600px; float: left; font-size: 12px;"
                 ng-if="game.status.note">
                 <i>{{game.status.note}}</i>
             </div>
@@ -235,7 +235,7 @@ function setBaseHref($level)
         <div class="row" style="background-color: #f4f9e3">
             <!--This line will display any description of the game. Stuff like 'Cleveland home opener'-->
             <div class="description"
-                style="margin-left: 50px; text-align: left; width: 325px; float: left; font-size: 12px;"
+                style="margin-left: 50px; text-align: left; width: 600px; float: left; font-size: 12px;"
                 ng-if="game.description">
                 <i>{{game.description}}</i>
             </div>
