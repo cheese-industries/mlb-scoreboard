@@ -80,7 +80,7 @@ function setBaseHref($level)
             <!--If the game is in progress or it's over, show the number of runs that the away team has scored.-->
             <div class="away-score"
                 style="width: 40px; float: left; align: left; font-size: 12px; text-align: left;"
-                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early' || game.status.status == 'Suspended'">{{game.linescore.r.away}}</div>
+                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early' || game.status.status == 'Suspended' || game.status.status == 'Delayed'">{{game.linescore.r.away}}</div>
             <div class="away-score"
                 style="width: 40px; float: left; align: left; font-size: 12px; text-align: left;"
                 ng-if="game.status.status == 'Postponed'"></div>
@@ -206,7 +206,7 @@ function setBaseHref($level)
                 {{game.ampm}}</div>
             <div class="home-score"
                 style="width: 40px; float: left; font-size: 12px;"
-                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early' || game.status.status == 'Suspended'">{{game.linescore.r.home}}</div>
+                ng-if="game.status.status == 'In Progress' || game.status.status == 'Final' || game.status.status == 'Game Over' || game.status.status == 'Completed Early' || game.status.status == 'Suspended' || game.status.status == 'Delayed'">{{game.linescore.r.home}}</div>
             <div class="home-score"
                 style="width: 40px; float: left; font-size: 12px;"
                 ng-if="game.status.status == 'Postponed'"></div>
