@@ -92,8 +92,14 @@ overflow-x:hidden;
             <!--If the game isn't in preview or pregame, and it isn't over, it must be in progress. Show the inning.-->
             <div class="inning"
                 style="width: 75px; float: left; text-align: left; font-size: 12px;"
-                ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early' && game.status.status != 'Suspended' && game.status.status != 'Delayed Start: Rain'">{{game.status.inning_state}}
+                ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early' && game.status.status != 'Suspended' && game.status.status != 'Delayed Start: Rain' && game.status.inning_state != 'End'">{{game.status.inning_state}}
                 {{game.status.inning}}</div>
+			<!--This next part is a workaround for MLB's habit of changing the inning number before removing 'end' from the inning state.-->
+			<div class="inning"
+                style="width: 75px; float: left; text-align: left; font-size: 12px;"
+                ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early' && game.status.status != 'Suspended' && game.status.status != 'Delayed Start: Rain' && game.status.inning_state == 'End'">Top
+                {{game.status.inning}}</div>
+			<!--END OF INNING STATE WORKAROUND-->
             <div class="boxscore"
                 style="text-align: left; width: 175px; float: left; font-size: 12px;"
                 ng-if="game.status.status != 'Final' && game.status.status != 'Game Over' && game.status.status != 'Preview' && game.status.status != 'Pre\-Game' && game.status.status != 'Warmup' && game.status.status != 'Delayed Start' && game.status.status != 'Postponed' && game.status.status != 'Completed Early' && game.status.status != 'Cancelled' && game.status.status != 'Suspended' && game.status.status != 'Delayed Start: Rain'">Balls:
