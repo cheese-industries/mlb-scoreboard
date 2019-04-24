@@ -1,30 +1,119 @@
 <head>
 <title>Baseball Scoreboard</title>
-  <!-- Facebook Pixel Code -->
+<!-- Facebook Pixel Code -->
 <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '601133680360541');
-  fbq('track', 'PageView');
+    !function(f, b, e, v, n, t, s) {
+        if (f.fbq)
+            return;
+        n = f.fbq = function() {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue
+                    .push(arguments)
+        };
+        if (!f._fbq)
+            f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '601133680360541');
+    fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=601133680360541&ev=PageView&noscript=1"
-/></noscript>
+<noscript>
+    <img height="1" width="1" style="display: none"
+        src="https://www.facebook.com/tr?id=601133680360541&ev=PageView&noscript=1" />
+</noscript>
 <!-- End Facebook Pixel Code -->
 </head>
 <html>
-<iframe width=600 height=1200 src="league.php?level=MLB&service=mlb"></iframe>
-<iframe width=600 height=1200 src="league.php?level=Class AAA&service=aaa"></iframe>
-<iframe width=600 height=1200 src="league.php?level=Class AA&service=aax"></iframe> <!-- AA -->
-<iframe width=600 height=1200 src="league.php?level=Advanced Class A&service=afa"></iframe> <!-- Advanced A -->
-<iframe width=600 height=1200 src="league.php?level=Class A&service=afx"></iframe> <!-- A -->
-<iframe width=600 height=1200 src="league.php?level=Short Season Class A&service=asx"></iframe> <!-- Short Season A -->
-<iframe width=600 height=1200 src="league.php?level=Rookie League&service=rok"></iframe> <!-- Rookie -->
-<iframe width=600 height=1200 src="disclaimer.html"></iframe>
+<body>
+    <span> Select Games for MLB Affiliate: <select id="selectTeam"
+        onchange="doAll()">
+            <option value="ALL">All</option>
+            <option value="BAL">Baltimore Orioles</option>
+            <option value="BOS">Boston Red Sox</option>
+            <option value="NYY">New York Yankees</option>
+            <option value="TB">Tampa Bay Rays</option>
+            <option value="TOR">Toronto Blue Jays</option>
+            <option value="CWS">Chicago White Sox</option>
+            <option value="CLE">Cleveland Indians</option>
+            <option value="DET">Detroit Tigers</option>
+            <option value="KC">Kansas City Royals</option>
+            <option value="MIN">Minnesota Twins</option>
+            <option value="HOU">Houston Astros</option>
+            <option value="LAA">Los Angeles Angels</option>
+            <option value="OAK">Oakland Athletics</option>
+            <option value="SEA">Seattle Mariners</option>
+            <option value="TEX">Texas Rangers</option>
+            <option value="ATL">Atlanta Braves</option>
+            <option value="MIA">Miami Marlins</option>
+            <option value="NYM">New York Mets</option>
+            <option value="PHI">Philadelphia Phillies</option>
+            <option value="WSH">Washington Nationals</option>
+            <option value="CHC">Chicago Cubs</option>
+            <option value="CIN">Cincinnati Reds</option>
+            <option value="MIL">Milwaukee Brewers</option>
+            <option value="PIT">Pittsburgh Pirates</option>
+            <option value="STL">St. Louis Cardinals</option>
+            <option value="ARI">Arizona Diamondbacks</option>
+            <option value="COL">Colorado Rockies</option>
+            <option value="LAD">Los Angeles Dodgers</option>
+            <option value="SD">San Diego Padres</option>
+            <option value="SF">San Francisco Giants</option>
+    </select>
+    </span>
+    <p id="scoreboard">Please select desired Major League team.</p>
+    <script>
+                    function iframe(level, service, mlTeamAbbrev, mlTeamName) {
+                        return "<iframe width=600 height=1200 src=\"league.php?level="
+                                + level
+                                + "&service="
+                                + service
+                                + "&team="
+                                + mlTeamAbbrev
+                                + "&teamName="
+                                + mlTeamName
+                                + "\"></iframe>";
+                    }
+
+                    function doAll() {
+                        var teamSelector = document
+                                .getElementById("selectTeam");
+                        var mlTeamAbbrev = teamSelector.value;
+                        var mlTeamName = teamSelector[teamSelector.selectedIndex].text;
+                        console.debug("For the team, you Selected ["
+                                + mlTeamName + "(" + mlTeamAbbrev + ")" + "]!");
+                        document.getElementById("scoreboard").innerHTML = iframe(
+                                "MLB", "mlb", mlTeamAbbrev, mlTeamName)
+                                + iframe("AAA", "aaa", mlTeamAbbrev, mlTeamName)
+                                + iframe("AA",  "aax", mlTeamAbbrev, mlTeamName)
+                                + iframe("Advanced Class A", "afa", mlTeamAbbrev, mlTeamName)
+                                + iframe("Class A",              "afx", mlTeamAbbrev, mlTeamName)
+                                + iframe("Short Season Class A", "asx", mlTeamAbbrev, mlTeamName)
+                                + iframe("Rookie League",        "rok", mlTeamAbbrev, mlTeamName)
+                                "<iframe width=600 height=1200 src=\"disclaimer.html\"></iframe>";
+                    }
+                    // Initialization:
+                    doAll();
+                    /*
+                    var timesHere = 0;
+                    function checkIfFirstTime() {
+                        if (timesHere == 0) {
+                            doAll();
+                        }
+                        timesHere++;
+                        console.debug("timesHere is [" + timesHere + "]")
+                    }
+                    checkIfFirstTime();
+                     */
+                </script>
+    <!--
+-->
+</body>
 </html>

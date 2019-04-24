@@ -95,6 +95,33 @@ mlbApp.controller('scoreboardController', ['$scope', 'getScore', '$interval',
             $('.server-message').attr("style", "display: block");
         });
  
+        $scope.criteriaMatch = function(mlbTeamCode, level, list) {
+            console.debug("criteriaMatch(): [" + mlbTeamCode + "]"
+                        + ", [" + level + "]"
+                        + ", [" + list + "]");
+            return function(game) {
+                if (mlbTeamCode == "ALL") {
+                    return true;
+                }
+                if (typeof game === 'undefined') {
+                    return false;
+                }
+                var homeTarget = level + "," + game.home_name_abbrev;
+                var awayTarget = level + "," + game.away_name_abbrev;
+                var array = list.split("|");
+                for (var i = 0; i < array.length; i++)
+                {
+                    var s = array[i];
+                    // console.debug("Checking [" + s + "] against [" + homeTarget + "] and [" + awayTarget + "]"); 
+                    if ((s == homeTarget) || (s == awayTarget)) {
+                        // console.debug("Returning true");
+                        return true;
+                    }
+                }
+                // Nothing found
+                return false;
+            };
+          }
  
         /* event handler for choosing previous day */
         $scope.prevDate = function() {
