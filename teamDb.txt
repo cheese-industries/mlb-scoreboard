@@ -35,49 +35,49 @@ Scranton/Wilkes-Barre RailRiders,swb,IL,AAA,NYY,Scranton,PA,18507
 Pawtucket Red Sox,paw,IL,AAA,BOS,Pawtucket,RI,02860
 Rochester Red Wings,roc,IL,AAA,MIN,Rochester,NY,14608
 Buffalo Bisons,buf,IL,AAA,TOR,Buffalo,NY,14203
-Charlotte Knights,chr,IL,AAA,CWS,Charlotte,NC,28202
-Gwinnett Stripers,gwi,IL,AAA,ATL,Lawrenceville,GA,30043
-Durham Bulls,dub,IL,AAA,TB,Durham,NC,27701
+Charlotte Knights,cha,IL,AAA,CWS,Charlotte,NC,28202
+Gwinnett Stripers,gwn,IL,AAA,ATL,Lawrenceville,GA,30043
+Durham Bulls,dur,IL,AAA,TB,Durham,NC,27701
 Norfolk Tides,nor,IL,AAA,BAL,Norfolk,VA,23510
 Columbus Clippers,col,IL,AAA,CLE,Columbus,OH,43215
 Indianapolis Indians,ind,IL,AAA,PIT,Indianapolis,IN,46225
 Louisville Bats,lou,IL,AAA,CIN,Louisville,KY,40202
 Toledo Mud Hens,tol,IL,AAA,DET,Toledo,OH,43604
 Iowa Cubs,iow,PCL,AAA,CHC,Des Moines,IA,50309
-Memphis Redbirds,mrb,PCL,AAA,STL,Memphis,TN,38103
+Memphis Redbirds,mem,PCL,AAA,STL,Memphis,TN,38103
 Omaha Storm Chasers,oma,PCL,AAA,KC,Omaha,NE,68046
 Nashville Sounds,nas,PCL,AAA,TEX,Nashville,TN,37219
-Round Rock Express,rre,PCL,AAA,HOU,Round Rock,TX,78664
-New Orleans Baby Cakes,noz,PCL,AAA,MIA,New Orleans,LA,70003
-San Antonio Missions,san,PCL,AAA,MIL,San Antonio,TX,78227
+Round Rock Express,rr,PCL,AAA,HOU,Round Rock,TX,78664
+New Orleans Baby Cakes,no,PCL,AAA,MIA,New Orleans,LA,70003
+San Antonio Missions,sa,PCL,AAA,MIL,San Antonio,TX,78227
 Oklahoma City Dodgers,okc,PCL,AAA,LAD,Oklahoma City,OK,73104
 Fresno Grizzlies,fre,PCL,AAA,WSH,Fresno,CA,93721
-Sacramento River Cats,src,PCL,AAA,SF,Sacramento,CA,95691
+Sacramento River Cats,sac,PCL,AAA,SF,Sacramento,CA,95691
 Tacoma Rainiers,tac,PCL,AAA,SEA,Tacoma,WA,98405
-Reno Aces,ren,PCL,AAA,ARI,Reno,NV,89501
-Las Vegas Aviators,lvg,PCL,AAA,OAK,Las Vegas,NV,89135
-Albuquerque Isotopes,alb,PCL,AAA,COL,Albuquerque,NM,87106
+Reno Aces,rno,PCL,AAA,ARI,Reno,NV,89501
+Las Vegas Aviators,lv,PCL,AAA,OAK,Las Vegas,NV,89135
+Albuquerque Isotopes,abq,PCL,AAA,COL,Albuquerque,NM,87106
 El Paso Chihuahuas,elp,PCL,AAA,SD,El Paso,TX,79901
-Salt Lake Bees,slc,PCL,AAA,LAA,Salt Lake City,UT,84115
-Trenton Thunder,tre,EL,AAX,NYY,Trenton,NJ,08611
-Binghamton Rumble Ponies,bin,EL,AAX,NYM,Binghamton,NY,13901
+Salt Lake Bees,sl,PCL,AAA,LAA,Salt Lake City,UT,84115
+Trenton Thunder,trn,EL,AAX,NYY,Trenton,NJ,08611
+Binghamton Rumble Ponies,bng,EL,AAX,NYM,Binghamton,NY,13901
 Hartford Yard Goats,hfd,EL,AAX,COL,Hartford,CT,06103
 Reading Fightin Phils,rea,EL,AAX,PHI,Reading,PA,19601
-New Hampshire Fisher Cats,nhm,EL,AAX,TOR,Manchester,NH,03102
-Portland Sea Dogs,prt,EL,AAX,BOS,Portland,ME,04102
-Harrisburg Senators,har,EL,AAX,WSH,Harrisburg,PA,17101
-Erie SeaWolves,esw,EL,AAX,DET,Erie,PA,16501
+New Hampshire Fisher Cats,nh,EL,AAX,TOR,Manchester,NH,03102
+Portland Sea Dogs,por,EL,AAX,BOS,Portland,ME,04102
+Harrisburg Senators,hbg,EL,AAX,WSH,Harrisburg,PA,17101
+Erie SeaWolves,eri,EL,AAX,DET,Erie,PA,16501
 Altoona Curve,alt,EL,AAX,PIT,Altoona,PA,16602
 Richmond Flying Squirrels,ric,EL,AAX,SF,Richmond,VA,23230
 Akron RubberDucks,akr,EL,AAX,CLE,Akron,OH,44308
 Bowie Baysox,bow,EL,AAX,BAL,Bowie,MD,20716
-Jackson Generals,jac,SL,AAX,ARI,Jackson,TN,38305
-Tennessee Smokies,ten,SL,AAX,CHC,Knoxville,TN,37764
-Montgomery Biscuits,mon,SL,AAX,TB,Montgomery,AL,36104
+Jackson Generals,jxn,SL,AAX,ARI,Jackson,TN,38305
+Tennessee Smokies,tns,SL,AAX,CHC,Knoxville,TN,37764
+Montgomery Biscuits,mtg,SL,AAX,TB,Montgomery,AL,36104
 Birmingham Barons,bir,SL,AAX,CWS,Birmingham,AL,35233
-Chattanooga Lookouts,cng,SL,AAX,CIN,Chattanooga,TN,37402
-Pensacola Blue Wahoos,pen,SL,AAX,MIN,Pensacola,FL,32502
-Mississippi Braves,msb,SL,AAX,ATL,Jackson,MS,39208
+Chattanooga Lookouts,cha,SL,AAX,CIN,Chattanooga,TN,37402
+Pensacola Blue Wahoos,pns,SL,AAX,MIN,Pensacola,FL,32502
+Mississippi Braves,mis,SL,AAX,ATL,Jackson,MS,39208
 Biloxi Shuckers,blx,SL,AAX,MIL,Biloxi,MS,39350
 Mobile BayBears,mob,SL,AAX,LAA,Mobile,AL,36606
 Jacksonville Jumbo Shrimp,jax,SL,AAX,MIA,Jacksonville,FL,32202
@@ -86,82 +86,82 @@ Tulsa Drillers,tul,TL,AAX,LAD,Tulsa,OK,74120
 Northwest Arkansas Naturals,nwa,TL,AAX,KC,Springdale,AR,72762
 Springfield Cardinals,spr,TL,AAX,STL,Springfield,MO,65802
 Frisco RoughRiders,fri,TL,AAX,TEX,Frisco,TX,75034
-Midland RockHounds,mro,TL,AAX,OAK,Midland,TX,79706
-Corpus Christi Hooks,cor,TL,AAX,HOU,Corpus Christi,TX,78401
+Midland RockHounds,mid,TL,AAX,OAK,Midland,TX,79706
+Corpus Christi Hooks,cc,TL,AAX,HOU,Corpus Christi,TX,78401
 Amarillo Sod Poodles,ama,TL,AAX,SD,Amarillo,TX,79101
 Visalia Rawhide,vis,CAL,AFA,ARI,Visalia,CA,93291
 Modesto Nuts,mod,CAL,AFA,SEA,Modesto,CA,95351
-San Jose Giants,sjg,CAL,AFA,SF,San Jose,CA,95112
-Stockton Ports,sto,CAL,AFA,OAK,Stockton,CA,95203
-Rancho Cucamonga Quakes,rcq,CAL,AFA,LAD,Rancho Cucamonga,CA,91730
-Lake Elsinore Storm,les,CAL,AFA,SD,Lake Elsinore,CA,92530
-Inland Empire 66ers,inl,CAL,AFA,LAA,San Bernardino,CA,92410
-Lancaster JetHawks,lnc,CAL,AFA,COL,Lancaster,CA,93536
+San Jose Giants,sj,CAL,AFA,SF,San Jose,CA,95112
+Stockton Ports,stk,CAL,AFA,OAK,Stockton,CA,95203
+Rancho Cucamonga Quakes,rc,CAL,AFA,LAD,Rancho Cucamonga,CA,91730
+Lake Elsinore Storm,le,CAL,AFA,SD,Lake Elsinore,CA,92530
+Inland Empire 66ers,ie,CAL,AFA,LAA,San Bernardino,CA,92410
+Lancaster JetHawks,lan,CAL,AFA,COL,Lancaster,CA,93536
 Wilmington Blue Rocks,wil,CAR,AFA,KC,Wilmington,DE,19801
 Lynchburg Hillcats,lyn,CAR,AFA,CLE,Lynchburg,VA,25401
-Frederick Keys,frd,CAR,AFA,BAL,Frederick,MD,21703
+Frederick Keys,fre,CAR,AFA,BAL,Frederick,MD,21703
 Potomac Nationals,pot,CAR,AFA,WSH,Woodbridge,VA,22192
 Salem Red Sox,sal,CAR,AFA,BOS,Salem,VA,24153
-Down East Wood Ducks,dne,CAR,AFA,TEX,Kinston,NC,28501
-Carolina Mudcats,cmc,CAR,AFA,MIL,Zebulon,NC,27597
+Down East Wood Ducks,de,CAR,AFA,TEX,Kinston,NC,28501
+Carolina Mudcats,car,CAR,AFA,MIL,Zebulon,NC,27597
 Fayetteville Woodpeckers,fay,CAR,AFA,HOU,Fayetteville,NC,28301
-Winston-Salem Dash,wsw,CAR,AFA,CWS,Winston-Salem,NC,27101
-Myrtle Beach Pelicans,myr,CAR,AFA,CHC,Myrtle Beach,SC,29577
+Winston-Salem Dash,ws,CAR,AFA,CWS,Winston-Salem,NC,27101
+Myrtle Beach Pelicans,mb,CAR,AFA,CHC,Myrtle Beach,SC,29577
 Dunedin Blue Jays,dun,FSL,AFA,TOR,Dunedin,FL,34698
-Daytona Tortugas,dbc,FSL,AFA,CIN,Daytona Beach,FL,32114
+Daytona Tortugas,dbt,FSL,AFA,CIN,Daytona Beach,FL,32114
 Lakeland Flying Tigers,lak,FSL,AFA,DET,Lakeland,FL,33805
 Clearwater Threshers,clr,FSL,AFA,PHI,Clearwater,FL,33765
 Florida Fire Frogs,flo,FSL,AFA,ATL,Kissimmee,FL,34744
-Tampa Tarpons,tby,FSL,AFA,NYY,Tampa,FL,33614
-Bradenton Marauders,bra,FSL,AFA,PIT,Bradenton,FL,34205
-Palm Beach Cardinals,pbc,FSL,AFA,STL,Jupiter,FL,33458
+Tampa Tarpons,tam,FSL,AFA,NYY,Tampa,FL,33614
+Bradenton Marauders,brd,FSL,AFA,PIT,Bradenton,FL,34205
+Palm Beach Cardinals,pmb,FSL,AFA,STL,Jupiter,FL,33458
 Fort Myers Miracle,ftm,FSL,AFA,MIN,Fort Myers,FL,33912
-St. Lucie Mets,slu,FSL,AFA,NYM,Port St. Lucie,FL,34986
+St. Lucie Mets,stl,FSL,AFA,NYM,Port St. Lucie,FL,34986
 Jupiter Hammerheads,jup,FSL,AFA,MIA,Jupiter,FL,33458
 Charlotte Stone Crabs,cha,FSL,AFA,TB,Port Charlotte,FL,33948
-Lake County Captains,lco,MWL,AFX,CLE,Eastlake,OH,44095
-Fort Wayne TinCaps,ftw,MWL,AFX,SD,Fort Wayne,IN,46802
+Lake County Captains,lc,MWL,AFX,CLE,Eastlake,OH,44095
+Fort Wayne TinCaps,fw,MWL,AFX,SD,Fort Wayne,IN,46802
 Lansing Lugnuts,lan,MWL,AFX,TOR,Lansing,MI,48912
-Bowling Green Hot Rods,bgr,MWL,AFX,TB,Bowling Green,KY,42101
-South Bend Cubs,sou,MWL,AFX,CHC,South Bend,IN,46601
-Great Lakes Loons,swm,MWL,AFX,LAD,Midland,MI,48640
-West Michigan Whitecaps,wmi,MWL,AFX,DET,Grand Rapids,MI,49321
+Bowling Green Hot Rods,bg,MWL,AFX,TB,Bowling Green,KY,42101
+South Bend Cubs,sb,MWL,AFX,CHC,South Bend,IN,46601
+Great Lakes Loons,gl,MWL,AFX,LAD,Midland,MI,48640
+West Michigan Whitecaps,wm,MWL,AFX,DET,Grand Rapids,MI,49321
 Dayton Dragons,day,MWL,AFX,CIN,Dayton,OH,45402
 Burlington Bees,bur,MWL,AFX,LAA,Burlington,IA,52601
 Clinton LumberKings,cli,MWL,AFX,MIA,Clinton,IA,52732
-Kane County Cougars,kcc,MWL,AFX,ARI,Geneva,IL,60134
-Quad Cities River Bandits,qcs,MWL,AFX,HOU,Davenport,IA,52802
-Cedar Rapids Kernels,ced,MWL,AFX,MIN,Cedar Rapids,IA,52404
+Kane County Cougars,kc,MWL,AFX,ARI,Geneva,IL,60134
+Quad Cities River Bandits,qc,MWL,AFX,HOU,Davenport,IA,52802
+Cedar Rapids Kernels,cr,MWL,AFX,MIN,Cedar Rapids,IA,52404
 Beloit Snappers,bel,MWL,AFX,OAK,Beloit,WI,53511
 Wisconsin Timber Rattlers,wis,MWL,AFX,MIL,Appleton,WI,54913
 Peoria Chiefs,peo,MWL,AFX,STL,Peoria,IL,61605
 Delmarva Shorebirds,del,SAL,AFX,BAL,Salisbury,MD,21804
 Hickory Crawdads,hic,SAL,AFX,TEX,Hickory,NC,28601
-West Virginia Power,wva,SAL,AFX,SEA,Charleston,WV,25301
+West Virginia Power,wv,SAL,AFX,SEA,Charleston,WV,25301
 Greensboro Grasshoppers,gbo,SAL,AFX,PIT,Greensboro,NC,27401
 Hagerstown Suns,hag,SAL,AFX,WSH,Hagerstown,MD,21740
 Kannapolis Intimidators,kan,SAL,AFX,CWS,Kannapolis,NC,28083
 Lakewood Blue Claws,lwd,SAL,AFX,PHI,Lakewood,NJ,08701
 Lexington Legends,lex,SAL,AFX,KC,Lexington,KY,40505
 Augusta GreenJackets,aug,SAL,AFX,SF,Augusta,GA,29841
-Charleston RiverDogs,crd,SAL,AFX,NYY,Charleston,SC,29403
+Charleston RiverDogs,csc,SAL,AFX,NYY,Charleston,SC,29403
 Asheville Tourists,ash,SAL,AFX,COL,Asheville,NC,28801
 Columbia Fireflies,col,SAL,AFX,NYM,Columbia,SC,29201
-Greenville Drive,cap,SAL,AFX,BOS,Greenville,SC,29601
+Greenville Drive,gvl,SAL,AFX,BOS,Greenville,SC,29601
 Rome Braves,rom,SAL,AFX,ATL,Rome,GA,30161
-Hudson Valley Renegades,hvr,NYP,ASX,TB,Poughkeepsie,NY,12524
-Brooklyn Cyclones,bro,NYP,ASX,NYM,Brooklyn,NY,11224
-Staten Island Yankees,sta,NYP,ASX,NYY,Staten Island,NY,10301
-Aberdeen IronBirds,abe,NYP,ASX,BAL,Aberdeen,MD,21001
-Mahoning Valley Scrappers,mvs,NYP,ASX,CLE,Youngstown,OH,44446
+Hudson Valley Renegades,hv,NYP,ASX,TB,Poughkeepsie,NY,12524
+Brooklyn Cyclones,brk,NYP,ASX,NYM,Brooklyn,NY,11224
+Staten Island Yankees,si,NYP,ASX,NYY,Staten Island,NY,10301
+Aberdeen IronBirds,abd,NYP,ASX,BAL,Aberdeen,MD,21001
+Mahoning Valley Scrappers,mv,NYP,ASX,CLE,Youngstown,OH,44446
 Auburn Doubledays,aub,NYP,ASX,WSH,Auburn,NY,13021
 Batavia Muckdogs,bat,NYP,ASX,MIA,Batavia,NY,14020
-State College Spikes,stc,NYP,ASX,STL,State College,PA,16802
-West Virginia Black Bears,wev,NYP,ASX,PIT,Morgantown,WV,26534
-Willamsport Crosscutters,wpt,NYP,ASX,PHI,Williamsport,PA,17701
+State College Spikes,sc,NYP,ASX,STL,State College,PA,16802
+West Virginia Black Bears,wv,NYP,ASX,PIT,Morgantown,WV,26534
+Willamsport Crosscutters,wil,NYP,ASX,PHI,Williamsport,PA,17701
 Connecticut Tigers,con,NYP,ASX,DET,Norwich,CT,06360
 Lowell Spinners,low,NYP,ASX,BOS,Lowell,MA,01854
-Tri-City ValleyCats,trc,NYP,ASX,HOU,Troy,NY,12180
+Tri-City ValleyCats,tri,NYP,ASX,HOU,Troy,NY,12180
 Vermont Lake Monsters,ver,NYP,ASX,OAK,Burlington,VT,05401
 Everett AquaSox,eve,NWL,ASX,SEA,Everett,WA,98201
 Spokane Indians,spo,NWL,ASX,TEX,Spokane,WA,99202
@@ -170,44 +170,44 @@ Vancouver Canadians,van,NWL,ASX,TOR,Vancouver,BC,V5V 3H4
 Boise Hawks,boi,NWL,ASX,COL,Boise,ID,83714
 Eugene Emeralds,eug,NWL,ASX,CHC,Eugene,OR,97401
 Hillsboro Hops,hil,NWL,ASX,ARI,Hillsboro,OR,97124
-Salem-Keizer Volcanoes,skv,NWL,ASX,SF,Salem,OR,97303
+Salem-Keizer Volcanoes,sk,NWL,ASX,SF,Salem,OR,97303
 Bluefield Blue Jays,blu,APP,ROK,TOR,Bluefield,VA,24701
-Burlington Royals,brl,APP,ROK,KC,Burlington,NC,27217
-Danville Braves,dnv,APP,ROK,ATL,Danville,VA,24540
-Princeton Rays,pri,APP,ROK,TB,Princeton,WV,24740
+Burlington Royals,bur,APP,ROK,KC,Burlington,NC,27217
+Danville Braves,dan,APP,ROK,ATL,Danville,VA,24540
+Princeton Rays,prn,APP,ROK,TB,Princeton,WV,24740
 Pulaski Yankees,pul,APP,ROK,NYY,Pulaski,VA,24301
-Bristol Pirates,bri,APP,ROK,PIT,Bristol,VA,24021
-Elizabethton Twins,eli,APP,ROK,MIN,Elizabethton,TN,37643
-Greeneville Reds,gvl,APP,ROK,CIN,Greeneville,TN,37745
-Johnson City Cardinals,jcy,APP,ROK,STL,Johnson City,TN,37601
-Kingsport Mets,kpt,APP,ROK,NYM,Kingsport,TN,37660
+Bristol Pirates,brs,APP,ROK,PIT,Bristol,VA,24021
+Elizabethton Twins,elz,APP,ROK,MIN,Elizabethton,TN,37643
+Greeneville Reds,grn,APP,ROK,CIN,Greeneville,TN,37745
+Johnson City Cardinals,jc,APP,ROK,STL,Johnson City,TN,37601
+Kingsport Mets,kng,APP,ROK,NYM,Kingsport,TN,37660
 Billings Mustangs,bil,PIO,ROK,CIN,Billings,MT,59101
-Great Falls Voyagers,grf,PIO,ROK,CWS,Great Falls,MT,59405
-Idaho Falls Chukars,ida,PIO,ROK,KC,Idaho Falls,ID,83406
+Great Falls Voyagers,gtf,PIO,ROK,CWS,Great Falls,MT,59405
+Idaho Falls Chukars,idf,PIO,ROK,KC,Idaho Falls,ID,83406
 Missoula Osprey,mis,PIO,ROK,ARI,Missoula,MT,59801
-Grand Junction Rockies,gjr,PIO,ROK,COL,Grand Junction,CO,81501
+Grand Junction Rockies,gj,PIO,ROK,COL,Grand Junction,CO,81501
 Ogden Raptors,ogd,PIO,ROK,LAD,Ogden,UT,84401
-Orem Owlz,ore,PIO,ROK,LAA,Orem,UT,84058
+Orem Owlz,orm,PIO,ROK,LAA,Orem,UT,84058
 Rocky Mountain Vibes,rmv,PIO,ROK,MIL,Colorado Springs,CO,80922
 Angels,ang,AZL,ROK,LAA,Tempe,AZ,85282
-Athletics Gold,ago,AZL,ROK,OAK,Mesa,AZ,85201
-Athletics Green,agr,AZL,ROK,OAK,Mesa,AZ,85201
-Cubs 1,cub,AZL,ROK,CHC,Mesa,AZ,85201
-Cubs 2,cut,AZL,ROK,CHC,Mesa,AZ,85201
+Athletics Gold,asgo,AZL,ROK,OAK,Mesa,AZ,85201
+Athletics Green,asgr,AZL,ROK,OAK,Mesa,AZ,85201
+Cubs 1,cub1,AZL,ROK,CHC,Mesa,AZ,85201
+Cubs 2,cub2,AZL,ROK,CHC,Mesa,AZ,85201
 Diamondbacks,dia,AZL,ROK,ARI,Scottsdale,AZ,85258
 Giants Black,gib,AZL,ROK,SF,Scottsdale,AZ,85251
 Giants Orange,gio,AZL,ROK,SF,Scottsdale,AZ,85251
 Brewers Blue,brb,AZL,ROK,MIL,Phoenix,AZ,85031
 Brewers Gold,brg,AZL,ROK,MIL,Phoenix,AZ,85031
-Dodgers 1,dod,AZL,ROK,MIL,Phoenix,AZ,85037
-Dodgers 2,dot,AZL,ROK,LAD,Phoenix,AZ,85037
-Indians Blue,inb,AZL,ROK,CLE,Goodyear,AZ,85338
-Indians Red,inr,AZL,ROK,CLE,Goodyear,AZ,85338
-Reds,cin,AZL,ROK,CIN,Goodyear,AZ,85338
+Dodgers 1,dod1,AZL,ROK,MIL,Phoenix,AZ,85037
+Dodgers 2,dod2,AZL,ROK,LAD,Phoenix,AZ,85037
+Indians Blue,indb,AZL,ROK,CLE,Goodyear,AZ,85338
+Indians Red,indr,AZL,ROK,CLE,Goodyear,AZ,85338
+Reds,red,AZL,ROK,CIN,Goodyear,AZ,85338
 White Sox,wsx,AZL,ROK,CWS,Phoenix,AZ,85037
 Mariners,mrn,AZL,ROK,SEA,Peoria,AZ,85382
-Padres 1,sdo,AZL,ROK,SD,Peoria,AZ,85382
-Padres 2,sdt,AZL,ROK,SD,Peoria,AZ,85382
+Padres 1,sd1,AZL,ROK,SD,Peoria,AZ,85382
+Padres 2,sd2,AZL,ROK,SD,Peoria,AZ,85382
 Rangers,rng,AZL,ROK,TEX,Surprise,AZ,85374
 Royals,roy,AZL,ROK,KC,Surprise,AZ,85374
 Astros,ast,GCL,ROK,HOU,West Palm Beach,FL,33407
@@ -217,12 +217,12 @@ Mets,mts,GCL,ROK,NYM,Port St. Lucie,FL,34986
 Nationals,nat,GCL,ROK,WSH,West Palm Beach,FL,33407
 Braves,bra,GCL,ROK,ATL,Lake Buena Vista,FL,34747
 Pirates,pir,GCL,ROK,PIT,Bradenton,FL,34208
-Phillies East,phl,GCL,ROK,PHI,Clearwater,FL,33765
-Tigers East,tgr,GCL,ROK,DET,Lakeland,FL,33805
-Yankees East,yan,GCL,ROK,NYY,Tampa,FL,33614
-Blue Jays,blj,GCL,ROK,TOR,Dunedin,FL,34698
+Phillies East,phe,GCL,ROK,PHI,Clearwater,FL,33765
+Tigers East,tig,GCL,ROK,DET,Lakeland,FL,33805
+Yankees East,yae,GCL,ROK,NYY,Tampa,FL,33614
+Blue Jays,blu,GCL,ROK,TOR,Dunedin,FL,34698
 Phillies West,pll,GCL,ROK,PHI,Clearwater,FL,33765
-Tigers West,tgw,GCL,ROK,DET,Lakeland,FL,33805
+Tigers West,tiw,GCL,ROK,DET,Lakeland,FL,33805
 Yankees West,yaw,GCL,ROK,NYY,Tampa,FL,33614
 Orioles,ori,GCL,ROK,BAL,Sarasota,FL,34237
 Rays,ray,GCL,ROK,TB,Port Charlotte,FL,33948
@@ -274,18 +274,18 @@ Colorado,,DSL,ROK,COL,N/A (Dominican),N/A,N/A
 Royals 2,,DSL,ROK,KC,N/A (Dominican),N/A,N/A
 Tigers 2,,DSL,ROK,DET,N/A (Dominican),N/A,N/A
 Acereros de Monclova,,MEX,AAA,INDEPENDENT,Monclova,MX CA,N/A
-Algodoneros de Unión Laguna,,MEX,AAA,INDEPENDENT,Torreón,MX CA,N/A
+Algodoneros de Uniï¿½n Laguna,,MEX,AAA,INDEPENDENT,Torreï¿½n,MX CA,N/A
 Generales de Durango,,MEX,AAA,INDEPENDENT,Durango,MX DU,N/A
 Rieleros de Aguascalientes,,MEX,AAA,INDEPENDENT,Aguascalientes,MX AG,N/A
 Saraperos de Saltillo,,MEX,AAA,INDEPENDENT,Saltillo,MX CA,N/A
 Sultanes de Monterrey,,MEX,AAA,INDEPENDENT,Monterrey,MX NL,N/A
 Tecolotes de los Dos Laredos,,MEX,AAA,INDEPENDENT,Nuevo Laredo,MX TM,N/A
 Toros de Tijuana,,MEX,AAA,INDEPENDENT,Tijuana,MX BN,N/A
-Bravos de León,,MEX,AAA,INDEPENDENT,León,MX GJ,N/A
-Diablos Rojos del México,,MEX,AAA,INDEPENDENT,México,MX MX,N/A
+Bravos de Leï¿½n,,MEX,AAA,INDEPENDENT,Leï¿½n,MX GJ,N/A
+Diablos Rojos del Mï¿½xico,,MEX,AAA,INDEPENDENT,Mï¿½xico,MX MX,N/A
 Guerreros de Oaxaca,,MEX,AAA,INDEPENDENT,Oaxaca,MX OA,N/A
-Leones de Yucatán,,MEX,AAA,INDEPENDENT,Mérida,MX YU,N/A
+Leones de Yucatï¿½n,,MEX,AAA,INDEPENDENT,Mï¿½rida,MX YU,N/A
 Olmecas de Tabasco,,MEX,AAA,INDEPENDENT,Villahermosa,MX TB,N/A
 Pericos de Puebla,,MEX,AAA,INDEPENDENT,Puebla,MX PU,N/A
 Piratas de Campeche,,MEX,AAA,INDEPENDENT,Campeche,MX CM,N/A
-Tigres de Quintana Roo,,MEX,AAA,INDEPENDENT,Cancún,MX QR,N/A
+Tigres de Quintana Roo,,MEX,AAA,INDEPENDENT,Cancï¿½n,MX QR,N/A
