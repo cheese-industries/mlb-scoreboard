@@ -6,8 +6,7 @@
         if (f.fbq)
             return;
         n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue
-                    .push(arguments)
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
         };
         if (!f._fbq)
             f._fbq = n;
@@ -20,8 +19,7 @@
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '601133680360541');
     fbq('track', 'PageView');
 </script>
@@ -71,36 +69,26 @@
     <p id="scoreboard">Please select desired Major League team.</p>
     <script>
                     function iframe(level, service, mlTeamAbbrev, mlTeamName) {
-                        return "<iframe width=600 height=1200 src=\"league.php?level="
-                                + level
-                                + "&service="
-                                + service
-                                + "&team="
-                                + mlTeamAbbrev
-                                + "&teamName="
-                                + mlTeamName
-                                + "\"></iframe>";
+                        return "<iframe width=600 height=1200 src=\"league.php?level=" + level + "&service=" + service + "&team="
+                                + mlTeamAbbrev + "&teamName=" + mlTeamName + "\"></iframe>";
                     }
 
                     function doAll() {
-                        var teamSelector = document
-                                .getElementById("selectTeam");
+                        var teamSelector = document.getElementById("selectTeam");
                         var mlTeamAbbrev = teamSelector.value;
                         var mlTeamName = teamSelector[teamSelector.selectedIndex].text;
-                        console.debug("For the team, you Selected ["
-                                + mlTeamName + "(" + mlTeamAbbrev + ")" + "]!");
-                        document.getElementById("scoreboard").innerHTML = iframe(
-                                "MLB", "mlb", mlTeamAbbrev, mlTeamName)
+                        console.debug("For the team, you Selected [" + mlTeamName + "(" + mlTeamAbbrev + ")" + "]!");
+                        document.getElementById("scoreboard").innerHTML = iframe("MLB", "mlb", mlTeamAbbrev, mlTeamName)
                                 + iframe("AAA", "aaa", mlTeamAbbrev, mlTeamName)
-                                + iframe("AA",  "aax", mlTeamAbbrev, mlTeamName)
+                                + iframe("AA", "aax", mlTeamAbbrev, mlTeamName)
                                 + iframe("Advanced Class A", "afa", mlTeamAbbrev, mlTeamName)
-                                + iframe("Class A",              "afx", mlTeamAbbrev, mlTeamName)
+                                + iframe("Class A", "afx", mlTeamAbbrev, mlTeamName)
                                 + iframe("Short Season Class A", "asx", mlTeamAbbrev, mlTeamName)
-                                + iframe("Rookie League",        "rok", mlTeamAbbrev, mlTeamName)
-                                "<iframe width=600 height=1200 src=\"disclaimer.html\"></iframe>";
+                                + iframe("Rookie League", "rok", mlTeamAbbrev, mlTeamName);
                     }
                     // Initialization:
                     doAll();
                 </script>
+    <iframe width=600 height=1200 src=disclaimer.html></iframe>
 </body>
 </html>
